@@ -1,0 +1,32 @@
+use AlborManagement
+create table Userr(
+id_user nvarchar(50) not null primary key,
+first_name nvarchar(50),
+last_name nvarchar(50),
+user_function nvarchar(50))
+
+
+
+
+create table Client (
+id_cl nvarchar(50) not null primary key,
+company_name nvarchar(50),
+owner_name nvarchar(50),
+adress nvarchar(100))
+
+create table Project (
+id_project nvarchar(50) not null primary key,
+name_pr nvarchar(50),
+description_pr nvarchar(50),
+pr_owner nvarchar(50) foreign key references Client(id_cl))
+
+create table Task (
+id_task nvarchar(50) not null primary key,
+tsk_number nvarchar(50),
+tsk_desc nvarchar(500),
+task_exec_situation nvarchar(30),
+progress_execution int,
+task_comments nvarchar(250),
+pr_task nvarchar(50) foreign key references Project(id_project),
+exec_task nvarchar(50) foreign key references Userr(id_user),
+)

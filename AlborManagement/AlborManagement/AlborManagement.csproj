@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89F9766A-3CA4-43A7-AC80-416C52342BB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlborManagement</RootNamespace>
+    <AssemblyName>AlborManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.3\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClientForm.Designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addProjectForm.Designer.cs">
+      <DependentUpon>addProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardAdmin.Designer.cs">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardUser.Designer.cs">
+      <DependentUpon>DashboardUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDashboardForm.Designer.cs">
+      <DependentUpon>EmployeeDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Projects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Projects.Designer.cs">
+      <DependentUpon>Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecretaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecretaryForm.Designer.cs">
+      <DependentUpon>SecretaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClientForm.Designer.cs">
+      <DependentUpon>UpdateClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployeeForm.Designer.cs">
+      <DependentUpon>UpdateEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateProjectForm.Designer.cs">
+      <DependentUpon>updateProjectForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addProjectForm.resx">
+      <DependentUpon>addProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardAdmin.resx">
+      <DependentUpon>DashboardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardUser.resx">
+      <DependentUpon>DashboardUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDashboardForm.resx">
+      <DependentUpon>EmployeeDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Projects.resx">
+      <DependentUpon>Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SecretaryForm.resx">
+      <DependentUpon>SecretaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClientForm.resx">
+      <DependentUpon>UpdateClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployeeForm.resx">
+      <DependentUpon>UpdateEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateProjectForm.resx">
+      <DependentUpon>updateProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2 copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo albor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonIconOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personIconOrange2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userIconOrange4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userIconOrange3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIconEditerd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emailIconEdited2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordIconEdited2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safouan1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safouan2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safouan21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Letter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo albor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x edited1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargé.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIconEdited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIconEdited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIconEdited1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchIconEdited3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectIconEdited2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectIconEdited21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconEdited2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeeIconEdited21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClientIconEdited22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientIconEdited222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrangeHomeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OeangeProjectIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrangeemployeeIconEdited2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrangeclientIconEdited222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuIconEdites2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turnOff.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
